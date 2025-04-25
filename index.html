@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StyleGenius - AI Penentu Outfit</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+
+        <!-- Welcome Screen -->
+        <div class="screen active" id="welcome-screen">
+            <h1>Style Oracle</h1>
+            <p>Find your match outfit for your occasion</p>
+            <button class="btn" id="start-btn">Mulai</button>
+        </div>
+
+        <!-- Gender Screen -->
+        <div class="screen" id="gender-screen">
+            <div class="question-container">
+                <div class="question">
+                    <h3>1. Apa jenis kelamin Anda?</h3>
+                    <div class="options">
+                        <div class="option" data-value="male">Laki-laki</div>
+                        <div class="option" data-value="female">Perempuan</div>
+                    </div>
+                </div>
+            </div>
+            <button class="btn" id="gender-next" disabled>Selanjutnya</button>
+        </div>
+
+        <!-- Skin Tone Screen -->
+        <div class="screen" id="skin-tone-screen">
+            <div class="question-container">
+                <div class="question">
+                    <h3>2. Bagaimana rona dasar Anda?</h3>
+                    <div class="options">
+                        <div class="option" data-value="light">
+                            <img src="cool undertone.jpg" alt="light" class="option-image">
+                            <span>Cool</span>
+                        </div>
+                        <div class="option" data-value="medium">
+                            <img src="neutral undertone.jpg" alt="medium" class="option-image">
+                            <span>Neutral</span>
+                        </div>
+                        <div class="option" data-value="dark">
+                            <img src="warm undertone.jpg" alt="dark" class="option-image">
+                            <span>Warm</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="btn" id="skin-tone-next" disabled>Selanjutnya</button>
+            <button class="btn back-btn" id="skin-tone-back">Kembali</button>
+        </div>
+
+        <!-- Body Type Screen -->
+        <div class="screen" id="body-type-screen">
+            <div class="question-container">
+                <div class="question">
+                    <h3>3. Apa bentuk tubuh Anda?</h3>
+                    <div class="options" id="body-type-options">
+                        <!-- Options will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+            <button class="btn" id="body-type-next" disabled>Selanjutnya</button>
+            <button class="btn back-btn" id="body-type-back">Kembali</button>
+        </div>
+
+        <!-- Outfit Type Screen -->
+        <div class="screen" id="outfit-type-screen">
+            <div class="question-container">
+                <div class="question">
+                    <h3>4. Jenis outfit apa yang Anda cari?</h3>
+                    <div class="options">
+                        <div class="option" data-value="casual">Kasual/Informal</div>
+                        <div class="option" data-value="formal">Formal</div>
+                    </div>
+                </div>
+            </div>
+            <button class="btn" id="outfit-type-next" disabled>Temukan Outfit</button>
+            <button class="btn back-btn" id="outfit-type-back">Kembali</button>
+        </div>
+
+        <!-- Result Screen -->
+        <div class="screen" id="result-screen">
+            <div class="result-container">
+                <h2 class="result-title">Rekomendasi Outfit Untuk Anda</h2>
+                <p class="result-description">Berdasarkan preferensi Anda, berikut adalah outfit yang kami rekomendasikan:</p>
+                <img src="" alt="Rekomendasi Outfit" class="result-image" id="result-image">
+                <button class="btn" id="restart-btn">Mulai Lagi</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
